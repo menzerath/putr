@@ -1,0 +1,31 @@
+{
+	"name": "putr",
+	"version": "1.0.0",
+	"description": "putr opens a basic HTTP-server to receive and store data given via HTTP put-requests and is configured using a simple json-file.",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MarvinMenzerath/putr.git"
+	},
+	"keywords": [
+		"http",
+		"mysql",
+		"put"
+	],
+	"author": "Marvin Menzerath",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/MarvinMenzerath/putr/issues"
+	},
+	"homepage": "https://github.com/MarvinMenzerath/putr#readme",
+	"dependencies": {
+		"body-parser": "^1.16.0",
+		"express": "^4.14.1",
+		"mysql": "^2.13.0",
+		"winston": "^2.3.1"
+	}
+}
