@@ -6,4 +6,4 @@ npm-debug.log*
 .idea/
 
 # application
-config.json
+config/local.json

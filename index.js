@@ -1,4 +1,4 @@
-const config = require("./config.json");
+const config = require("./config/local.json");
 const database = require("./lib/database.js");
 const logger = require("./lib/logging.js");
 const packageinfo = require("./package.json");
