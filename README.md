@@ -3,44 +3,15 @@ putr opens a basic HTTP-server to receive and store data given via HTTP put-requ
 
 ## Install
 Download a current release from [here](https://github.com/MarvinMenzerath/putr/releases), extract it and change into the new directory.
-
 ```
 npm install
 ```
 
 ## Configuration
-Create a `config.json`-file using the example below and adapt it to your needs.
+Create a `config/local.json`-file using the [`config/example.json`-file](config/example.json) provided and adapt it to your needs.
 Next, create the tables according to your new config-file. Using the `utf8mb4_general_ci`-charset is recommended.
 
 Please note: not-whitelisted keys will not be saved and additional columns in your table (like `id` or `date`) will be filled with their default values.
-
-### config.json
-```json
-{
-	"webserver": {
-		"bind": "0.0.0.0",
-		"port": 8080
-	},
-	"database": {
-		"host": "127.0.0.1",
-		"port": 3306,
-		"user": "putr",
-		"password": "secretPasswordHere",
-		"database": "putr"
-	},
-	"storage": [
-		{
-			"endpoint": "myApplication",
-			"tablename": "myApplicationData",
-			"auth": "secretTokenHere",
-			"save": [
-				"dataKey1", "dataKey2", "dataKey3"
-			]
-		}
-	]
-}
-
-```
 
 ### Exemplary table
 ```
