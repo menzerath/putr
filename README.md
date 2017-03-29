@@ -1,10 +1,17 @@
 # putr
 putr opens a basic HTTP-server to receive and store data given via HTTP put-requests and is configured using a simple json-file.
 
-## Install
+## Installation
+
+### Manually
 Download a current release from [here](https://github.com/MarvinMenzerath/putr/releases), extract it and change into the new directory.
 ```
 npm install
+```
+
+### Using Docker
+```
+docker create --name putr -v /srv/putr/config/:/app/putr/config/ -p 80:8080 marvinmenzerath/putr
 ```
 
 ## Configuration
@@ -27,8 +34,15 @@ Please note: not-whitelisted keys will not be saved and additional columns in yo
 ```
 
 ## Run
+
+### Manually
 ```
 npm start
+```
+
+### Using Docker
+```
+docker start putr
 ```
 
 ## Send requests
