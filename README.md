@@ -1,46 +1,25 @@
 # putr
-putr opens a basic HTTP-server to receive and store data given via HTTP put-requests and is configured using a simple json-file.
+putr opens a HTTP-server to receive and store data given via HTTP put-requests and is configured using a simple json-file.
 
-## Install
+## Installation
+
+### Manually
 Download a current release from [here](https://github.com/MarvinMenzerath/putr/releases), extract it and change into the new directory.
-
 ```
 npm install
 ```
 
+### Using Docker
+[![Docker Layers](https://images.microbadger.com/badges/image/marvinmenzerath/putr.svg)](http://microbadger.com/images/marvinmenzerath/putr)
+```
+docker create --name putr -v /srv/putr/config/:/app/putr/config/ -p 80:8080 marvinmenzerath/putr
+```
+
 ## Configuration
-Create a `config.json`-file using the example below and adapt it to your needs.
+Create a `config/local.json`-file using the [`config/example.json`-file](config/example.json) provided and adapt it to your needs.
 Next, create the tables according to your new config-file. Using the `utf8mb4_general_ci`-charset is recommended.
 
 Please note: not-whitelisted keys will not be saved and additional columns in your table (like `id` or `date`) will be filled with their default values.
-
-### config.json
-```json
-{
-	"webserver": {
-		"bind": "0.0.0.0",
-		"port": 8080
-	},
-	"database": {
-		"host": "127.0.0.1",
-		"port": 3306,
-		"user": "putr",
-		"password": "secretPasswordHere",
-		"database": "putr"
-	},
-	"storage": [
-		{
-			"endpoint": "myApplication",
-			"tablename": "myApplicationData",
-			"auth": "secretTokenHere",
-			"save": [
-				"dataKey1", "dataKey2", "dataKey3"
-			]
-		}
-	]
-}
-
-```
 
 ### Exemplary table
 ```
@@ -56,8 +35,15 @@ Please note: not-whitelisted keys will not be saved and additional columns in yo
 ```
 
 ## Run
+
+### Manually
 ```
 npm start
+```
+
+### Using Docker
+```
+docker start putr
 ```
 
 ## Send requests

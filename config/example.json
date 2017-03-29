@@ -1,0 +1,25 @@
+{
+	"webserver": {
+		"bind": "0.0.0.0",
+		"port": 8080
+	},
+	"database": {
+		"host": "127.0.0.1",
+		"port": 3306,
+		"user": "putr",
+		"password": "secretPasswordHere",
+		"database": "putr"
+	},
+	"storage": [
+		{
+			"endpoint": "myApplication",
+			"tablename": "myApplicationData",
+			"auth": "secretTokenHere",
+			"save": [
+				"dataKey1",
+				"dataKey2",
+				"dataKey3"
+			]
+		}
+	]
+}
