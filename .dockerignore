@@ -1,0 +1,9 @@
+# npm
+node_modules/
+npm-debug.log*
+
+# ide
+.idea/
+
+# application
+config/local.json
