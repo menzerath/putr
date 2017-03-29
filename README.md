@@ -10,6 +10,7 @@ npm install
 ```
 
 ### Using Docker
+[![Docker Layers](https://images.microbadger.com/badges/image/marvinmenzerath/putr.svg)](http://microbadger.com/images/marvinmenzerath/putr)
 ```
 docker create --name putr -v /srv/putr/config/:/app/putr/config/ -p 80:8080 marvinmenzerath/putr
 ```
