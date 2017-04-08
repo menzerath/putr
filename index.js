@@ -24,7 +24,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // set custom "X-Powered-By"-header
-app.use(function (req, res, next) {
+app.use(function(req, res, next) {
 	res.setHeader("X-Powered-By", "putr");
 	next();
 });
