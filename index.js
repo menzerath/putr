@@ -1,11 +1,11 @@
 const config = require("./config/local.json");
 const database = require("./lib/database.js");
 const logger = require("./lib/logging.js");
-const packageinfo = require("./package.json");
+const pkg = require("./package.json");
 const putr = require("./lib/putr.js");
 
 // init
-logger.info("Welcome to putr v%s", packageinfo.version);
+logger.info("Welcome to putr v%s", pkg.version);
 
 // check database connection
 database.getConnection((err, connection) => {
