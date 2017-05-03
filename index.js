@@ -30,7 +30,8 @@ app.use(function(req, res, next) {
 });
 
 // configure endpoints and start server
-app.get("/", putr.handleGetRequest);
+app.get("/", putr.handleGetHomeRequest);
+app.get("/:endpoint", putr.handleGetRequest);
 app.put("/:endpoint", putr.handlePutRequest);
 app.use(putr.handleError);
 app.listen(config.webserver.port, config.webserver.bind);
