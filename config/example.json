@@ -15,6 +15,7 @@
 			"endpoint": "myApplication",
 			"tablename": "myApplicationData",
 			"auth": "secretTokenHere",
+			"allowGet": true,
 			"save": [
 				"dataKey1",
 				"dataKey2",
