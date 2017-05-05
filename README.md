@@ -47,7 +47,9 @@ docker start putr
 ```
 
 ## Send requests
-Now you can send HTTP put-requests to your putr-server and let it store the given data for you:
+Now you can send HTTP put-requests to your putr-server and let it store and retrieve the given data for you.
+
+### `PUT`
 ```
 PUT /myApplication HTTP/1.1
 Host: localhost:8080
@@ -58,5 +60,27 @@ Content-Type: application/json
 	"dataKey1": "some data",
 	"dataKey2": "more data",
 	"dataKey3": "even more data"
+}
+```
+
+### `GET`
+```
+GET /myApplication HTTP/1.1
+Host: localhost:8080
+Authorization: secretTokenHere
+```
+
+```json
+{
+	"success": true,
+	"data": [
+		{
+			"id": 1,
+			"datetime": "2017-05-01T13:37:00.000Z",
+			"dataKey1": "some data",
+			"dataKey2": "more data",
+			"dataKey3": "even more data"
+		}
+	]
 }
 ```
