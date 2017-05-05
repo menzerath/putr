@@ -1,5 +1,5 @@
 # putr
-putr opens a HTTP-server to receive and store data given via HTTP put-requests and is configured using a simple json-file.
+putr opens a HTTP-server to receive, store and display data given via HTTP requests and is configured using a simple json-file.
 
 ## Installation
 
