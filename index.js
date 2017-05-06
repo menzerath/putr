@@ -16,12 +16,18 @@ database.getConnection((err, connection) => {
 });
 
 // setup http-server
-const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
 
 // use body-parser
+const bodyParser = require("body-parser");
 app.use(bodyParser.json());
+
+// use cors
+const cors = require("cors");
+app.use(cors({
+	origin: config.webserver.cors
+}));
 
 // set custom "X-Powered-By"-header
 app.use(function(req, res, next) {

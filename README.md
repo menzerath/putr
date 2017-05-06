@@ -21,6 +21,12 @@ Next, create the tables according to your new config-file. Using the `utf8mb4_ge
 
 Please note: not-whitelisted keys will not be saved and additional columns in your table (like `id` or `date`) will be filled with their default values.
 
+### CORS
+The `webserver.cors` entry is interpreted by the [cors](https://www.npmjs.com/package/cors)-package as `origin` and you might want to use one of the following options:
+* `true` (boolean): reflect the request origin
+* `false` (boolean): do not add any headers
+* `["http://localhost", "https://localhost"]` (array; default): allow from the given origins
+
 ### Exemplary table
 ```
 +----------+----------+------+-----+-------------------+----------------+
