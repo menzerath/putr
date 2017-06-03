@@ -26,7 +26,7 @@ build_develop:
         - develop
     script:
         - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $REGISTRY_URL
-        - docker build -t $REGISTRY_URL/$PROJECT_GROUP/$PROJECT_NAME .
+        - docker build -t $REGISTRY_URL/$PROJECT_GROUP/$PROJECT_NAME:develop .
         - docker push $REGISTRY_URL/$PROJECT_GROUP/$PROJECT_NAME:develop
 
 build_tag:
@@ -38,5 +38,5 @@ build_tag:
         - tags
     script:
         - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $REGISTRY_URL
-        - docker build -t $REGISTRY_URL/$PROJECT_GROUP/$PROJECT_NAME .
+        - docker build -t $REGISTRY_URL/$PROJECT_GROUP/$PROJECT_NAME:$CI_COMMIT_TAG .
         - docker push $REGISTRY_URL/$PROJECT_GROUP/$PROJECT_NAME:$CI_COMMIT_TAG
