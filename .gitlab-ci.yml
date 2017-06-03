@@ -1,0 +1,18 @@
+image: alpine:3.6
+
+variables:
+    REGISTRY_URL: "docker.marvin-menzerath.de"
+    PROJECT_GROUP: "marvin"
+    PROJECT_NAME: "putr"
+
+build:
+    image: docker:latest
+    stage: build
+    services:
+        - docker:dind
+    only:
+        - master
+    script:
+        - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $REGISTRY_URL
+        - docker build -t $REGISTRY_URL/$PROJECT_GROUP/$PROJECT_NAME .
+        - docker push $REGISTRY_URL/$PROJECT_GROUP/$PROJECT_NAME
