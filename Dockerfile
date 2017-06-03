@@ -1,9 +1,9 @@
-FROM alpine:3.5
+FROM alpine:3.6
 MAINTAINER Marvin Menzerath <github@marvin-menzerath.de>
 
 WORKDIR /app/putr/
 COPY . /app/putr/
-RUN apk -U --no-progress add nodejs && \
+RUN apk -U --no-progress add nodejs nodejs-npm && \
     cd /app/putr/ && \
     npm install && \
     addgroup -g 1789 putr && \

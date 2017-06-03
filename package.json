@@ -1,6 +1,6 @@
 {
 	"name": "putr",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "putr opens a HTTP-server to receive, store and display data given via HTTP requests and is configured using a simple json-file.",
 	"main": "index.js",
 	"scripts": {
@@ -23,9 +23,9 @@
 	},
 	"homepage": "https://github.com/MarvinMenzerath/putr#readme",
 	"dependencies": {
-		"body-parser": "1.17.1",
+		"body-parser": "1.17.2",
 		"cors": "2.8.3",
-		"express": "4.15.2",
+		"express": "4.15.3",
 		"mysql": "2.13.0",
 		"winston": "2.3.1"
 	},
