@@ -1,10 +1,9 @@
-FROM alpine:3.6
+FROM node:8.1-alpine
 MAINTAINER Marvin Menzerath <github@marvin-menzerath.de>
 
 WORKDIR /app/putr/
 COPY . /app/putr/
-RUN apk -U --no-progress add nodejs nodejs-npm && \
-    cd /app/putr/ && \
+RUN cd /app/putr/ && \
     npm install && \
     addgroup -g 1789 putr && \
     adduser -h /app/putr/ -H -D -G putr -u 1789 putr && \
@@ -13,4 +12,4 @@ RUN apk -U --no-progress add nodejs nodejs-npm && \
 USER putr
 EXPOSE 8080
 VOLUME /app/putr/config/
-ENTRYPOINT ["/usr/bin/npm", "start"]
+ENTRYPOINT ["/usr/local/bin/npm", "start"]
