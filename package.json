@@ -24,7 +24,7 @@
 	"homepage": "https://github.com/MarvinMenzerath/putr#readme",
 	"dependencies": {
 		"body-parser": "1.17.2",
-		"cors": "2.8.3",
+		"cors": "2.8.4",
 		"express": "4.15.3",
 		"mysql": "2.13.0",
 		"winston": "2.3.1"
