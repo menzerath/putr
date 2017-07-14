@@ -1,4 +1,4 @@
-image: alpine:3.6
+image: docker:latest
 
 variables:
     REGISTRY_URL: "docker.marvin-menzerath.de"
@@ -6,7 +6,6 @@ variables:
     PROJECT_NAME: "putr"
 
 build_master:
-    image: docker:latest
     stage: build
     services:
         - docker:dind
@@ -18,7 +17,6 @@ build_master:
         - docker push $REGISTRY_URL/$PROJECT_GROUP/$PROJECT_NAME
 
 build_develop:
-    image: docker:latest
     stage: build
     services:
         - docker:dind
@@ -30,7 +28,6 @@ build_develop:
         - docker push $REGISTRY_URL/$PROJECT_GROUP/$PROJECT_NAME:develop
 
 build_tag:
-    image: docker:latest
     stage: build
     services:
         - docker:dind
