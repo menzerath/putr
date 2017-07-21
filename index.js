@@ -40,4 +40,4 @@ app.get("/", putr.handleGetHomeRequest);
 app.get("/:endpoint", putr.handleGetRequest);
 app.put("/:endpoint", putr.handlePutRequest);
 app.use(putr.handleError);
-app.listen(config.webserver.port, config.webserver.bind);
+app.listen(80);

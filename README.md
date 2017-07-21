@@ -4,7 +4,7 @@ HTTP-server to receive, store and display data given via HTTP requests and confi
 ## Installation
 The recommended way of deploying putr is to use the provided Docker image using the command below:
 ```
-docker run -d --name putr -v /local/path/to/putr/config/:/app/putr/config/ -p 80:8080 marvinmenzerath/putr
+docker run -d --name putr -v /local/path/to/putr/config/:/app/putr/config/ -p 8080:80 marvinmenzerath/putr
 ```
 
 An overview of all available tags can be found on the [Docker Hub](https://hub.docker.com/r/marvinmenzerath/putr/tags/).
