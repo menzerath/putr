@@ -1,6 +1,6 @@
 {
 	"name": "putr",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"description": "HTTP-server to receive, store and display data given via HTTP requests and configured using a simple json-file.",
 	"main": "index.js",
 	"scripts": {
