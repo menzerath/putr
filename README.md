@@ -1,23 +1,17 @@
 # putr
-putr opens a HTTP-server to receive, store and display data given via HTTP requests and is configured using a simple json-file.
+HTTP-server to receive, store and display data given via HTTP requests and configured using a simple json-file.
 
 ## Installation
-
-### Manually
-Download a current release from [here](https://github.com/MarvinMenzerath/putr/releases), extract it and change into the new directory.
+The recommended way of deploying putr is to use the provided Docker image using the command below:
 ```
-npm install
+docker run -d --name putr -v /local/path/to/putr/config/:/app/putr/config/ -p 80:8080 marvinmenzerath/putr
 ```
 
-### Using Docker
-[![Docker Layers](https://images.microbadger.com/badges/image/marvinmenzerath/putr.svg)](http://microbadger.com/images/marvinmenzerath/putr)
-```
-docker create --name putr -v /srv/putr/config/:/app/putr/config/ -p 80:8080 marvinmenzerath/putr
-```
+An overview of all available tags can be found on the [Docker Hub](https://hub.docker.com/r/marvinmenzerath/putr/tags/).
 
 ## Configuration
 Create a `config/local.json`-file using the [`config/example.json`-file](config/example.json) provided and adapt it to your needs.
-Next, create the tables according to your new config-file. Using the `utf8mb4_general_ci`-charset is recommended.
+Next, create the database-tables according to your new config-file. Using the `utf8mb4_general_ci`-charset is recommended. An example can be found below.
 
 Please note: not-whitelisted keys will not be saved and additional columns in your table (like `id` or `date`) will be filled with their default values.
 
@@ -38,18 +32,6 @@ The `webserver.cors` entry is interpreted by the [cors](https://www.npmjs.com/pa
 | dataKey2 | text     | NO   |     | NULL              |                |
 | dataKey3 | text     | NO   |     | NULL              |                |
 +----------+----------+------+-----+-------------------+----------------+
-```
-
-## Run
-
-### Manually
-```
-npm start
-```
-
-### Using Docker
-```
-docker start putr
 ```
 
 ## Send requests
