@@ -1,7 +1,8 @@
 FROM node:8.2.1-alpine
 MAINTAINER Marvin Menzerath <github@marvin-menzerath.de>
 
-RUN apk -U add curl
+RUN apk --no-cache upgrade && \
+    apk --no-cache add curl
 
 WORKDIR /app/putr/
 COPY . /app/putr/
