@@ -1,4 +1,4 @@
-FROM node:8.1-alpine
+FROM node:8.2.1-alpine
 MAINTAINER Marvin Menzerath <github@marvin-menzerath.de>
 
 RUN apk -U add curl
