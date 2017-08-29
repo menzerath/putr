@@ -25,8 +25,8 @@
 	"dependencies": {
 		"body-parser": "1.17.2",
 		"cors": "2.8.4",
-		"express": "4.15.3",
-		"mysql": "2.14.0",
+		"express": "4.15.4",
+		"mysql": "2.14.1",
 		"winston": "2.3.1"
 	},
 	"jshintConfig": {
