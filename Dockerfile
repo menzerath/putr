@@ -7,7 +7,7 @@ RUN apk --no-cache upgrade && \
 WORKDIR /app/putr/
 COPY . /app/putr/
 RUN cd /app/putr/ && \
-    npm install
+    npm install --only=production
 
 EXPOSE 80
 VOLUME /app/putr/config/
