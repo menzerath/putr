@@ -29,7 +29,7 @@
 		"mysql": "2.14.1",
 		"winston": "2.3.1"
 	},
-	"jshintConfig": {
-		"esversion": 6
+	"devDependencies": {
+		"eslint": "4.6.1"
 	}
 }
