@@ -11,5 +11,5 @@ RUN cd /app/putr/ && \
 
 EXPOSE 80
 VOLUME /app/putr/config/
-HEALTHCHECK --timeout=5s CMD curl --fail http://localhost:80 || exit 1
+HEALTHCHECK --timeout=5s CMD curl --fail http://localhost:80/health || exit 1
 ENTRYPOINT ["/usr/local/bin/npm", "start"]
