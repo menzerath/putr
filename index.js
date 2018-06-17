@@ -4,7 +4,7 @@ const pkg = require("./package.json");
 const putr = require("./lib/putr.js");
 
 // init
-logger.info("Welcome to putr v%s", pkg.version);
+logger.info("Starting putr v%s", pkg.version);
 
 // setup http-server
 const express = require("express");
@@ -33,3 +33,5 @@ app.get("/:endpoint", putr.handleGetRequest);
 app.put("/:endpoint", putr.handlePutRequest);
 app.use(putr.handleError);
 app.listen(80);
+
+logger.info("Listening on port 80");
