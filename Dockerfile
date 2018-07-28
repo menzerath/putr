@@ -2,7 +2,7 @@ FROM node:10.7.0-alpine
 LABEL maintainer="Marvin Menzerath <github@marvin-menzerath.de>"
 
 RUN apk --no-cache upgrade && \
-    apk --no-cache add curl
+    apk --no-cache add curl tzdata
 
 WORKDIR /app/putr/
 COPY . /app/putr/
