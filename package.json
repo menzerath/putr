@@ -10,7 +10,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/MarvinMenzerath/putr.git"
+		"url": "git+https://github.com/menzerath/putr.git"
 	},
 	"keywords": [
 		"http",
@@ -20,9 +20,9 @@
 	"author": "Marvin Menzerath",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/MarvinMenzerath/putr/issues"
+		"url": "https://github.com/menzerath/putr/issues"
 	},
-	"homepage": "https://github.com/MarvinMenzerath/putr#readme",
+	"homepage": "https://github.com/menzerath/putr#readme",
 	"dependencies": {
 		"body-parser": "1.18.3",
 		"cors": "2.8.4",
