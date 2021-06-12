@@ -9,10 +9,7 @@ logger.info("Starting putr v%s", pkg.version);
 // setup http-server
 const express = require("express");
 const app = express();
-
-// use body-parser
-const bodyParser = require("body-parser");
-app.use(bodyParser.json());
+app.use(express.json());
 
 // use cors
 const cors = require("cors");
